@@ -2,15 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/zhashkevych/go-basics/employees/storage"
 
+	"github.com/zhashkevych/go-basics/employees/storage"
 )
 
 func main() {
 	ms := storage.NewMemoryStorage()
-	ds :=  storage.NewDumbStorage()
+	ds := storage.NewDumbStorage()
 
-	fmt.Println(ms.data)
+	//fmt.Println(ms.data)
 
 	spawnEmployees(ms)
 	fmt.Println(ms.Get(3))
