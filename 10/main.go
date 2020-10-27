@@ -1,4 +1,4 @@
-package main	
+package main
 
 import (
 	"github.com/gin-gonic/gin"
@@ -15,5 +15,6 @@ func main() {
 	router.PUT("/employee/:id", handler.UpdateEmployee)
 	router.DELETE("/employee/:id", handler.DeleteEmployee)
 
-	router.Run()
+	//router.Run()
+	router.Run(":9090")
 }
