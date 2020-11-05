@@ -26,21 +26,21 @@ type MemoryStorage struct {
 	sync.Mutex
 }
 
-
-
 func NewMemoryStorage() *MemoryStorage {
-//Adding 2 people initially
+	//Adding 3 people initially
 	m1 := make(map[int]Employee)
-	var e1= Employee{ID:1, Name:"yura", Sex:"M", Age:25, Salary:1500  }
-	var e2= Employee{ID:2, Name:"alex", Sex:"M", Age:25, Salary:1500  }
-	m1[1]=e1
-	m1[2]=e2
+	var e1 = Employee{ID: 1, Name: "yura", Sex: "M", Age: 25, Salary: 1500}
+	var e2 = Employee{ID: 2, Name: "alex", Sex: "M", Age: 25, Salary: 1500}
+	var e3 = Employee{ID: 3, Name: "julian", Sex: "M", Age: 21, Salary: 500}
+	m1[1] = e1
+	m1[2] = e2
+	m1[3] = e3
 	//var mem=MemoryStorage{counter:3, data:m1}
 
 	return &MemoryStorage{
 		//data:    make(map[int]Employee),
-		data: m1,
-		counter: 3,
+		data:    m1,
+		counter: 4,
 	}
 }
 
